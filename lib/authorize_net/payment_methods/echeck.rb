@@ -11,9 +11,9 @@ module AuthorizeNet
     
     # Defines constants for each bank account type.
     module AccountType
-      CHECKING = 'CHECKING'
-      SAVINGS = 'SAVINGS'
-      BUSINESS_CHECKING = 'BUSINESSCHECKING'
+      CHECKING = 'checking'
+      SAVINGS = 'savings'
+      BUSINESS_CHECKING = 'businessChecking'
     end
     
     # Defines constants for each check type.
