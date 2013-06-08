@@ -617,6 +617,9 @@ module AuthorizeNet
         {:batchId => :batch_id}
       ]
       
+      GET_UNSETTLED_TRANSACTION_LIST = [
+      ]
+      
       GET_TRANSACTION_DETAILS = [
         {:transId => :transaction_id}
       ]
@@ -729,6 +732,7 @@ module AuthorizeNet
       FIELDS = {
         AuthorizeNet::XmlTransaction::Type::REPORT_GET_BATCH_LIST => GET_BATCH_LIST,
         AuthorizeNet::XmlTransaction::Type::REPORT_GET_TRANSACTION_LIST => GET_TRANSACTION_LIST,
+        AuthorizeNet::XmlTransaction::Type::REPORT_GET_UNSETTLED_TRANSACTION_LIST => GET_UNSETTLED_TRANSACTION_LIST,
         AuthorizeNet::XmlTransaction::Type::REPORT_GET_TRANSACTION_DETAILS => GET_TRANSACTION_DETAILS
       }
     end
