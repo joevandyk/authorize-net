@@ -49,6 +49,14 @@ describe AuthorizeNet::Reporting do
     response.success?.should be_true
     response.should respond_to(:transactions)
   end
+
+  it "should be able to fetch a list of unsettled transactions" do
+    transaction = AuthorizeNet::Reporting::Transaction.new(@api_login, @api_key, :gateway => :sandbox)
+    transaction.should respond_to(:get_unsettled_transaction_list)
+    response = transaction.get_unsettled_transaction_list
+    response.success?.should be_true
+    response.should respond_to(:transactions)
+  end
   
   it "should be able to fetch transaction details" do
     # create a transaction to fetch
