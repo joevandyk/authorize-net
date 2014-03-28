@@ -1,3 +1,5 @@
+= This isn't the official repository for the ruby authorize.net sdk. http://developer.authorize.net/downloads/ is where that is.
+
 = Authorize.Net Ruby SDK
 
 The Authorize.Net Ruby SDK is meant to offer an alternate object-oriented
