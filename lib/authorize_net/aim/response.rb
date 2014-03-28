@@ -4,7 +4,7 @@ module AuthorizeNet::AIM
   class Response < AuthorizeNet::KeyValueResponse
     
     # Our MD5 digest generator.
-    @@digest = OpenSSL::Digest::Digest.new('md5')
+    @@digest = OpenSSL::Digest.new('md5')
     
     include AuthorizeNet::AIM::Fields
     
