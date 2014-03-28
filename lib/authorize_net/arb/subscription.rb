@@ -33,6 +33,15 @@ module AuthorizeNet::ARB
         @length = new_length
       end
     end
+
+    # Override the total_occurrences setter to provide support for :unlimited shortcut. Do not document this method in rdoc.
+    def total_occurrences=(new_total_occurrences) #:nodoc:
+      if new_total_occurrences == :unlimited
+        @total_occurrences = UNLIMITED_OCCURRENCES
+      else
+        @total_occurrences = new_total_occurrences
+      end
+    end
     
     # Override the unit setter to provide support for :day, :days, :month, :months shortcut. Do not document this method in rdoc.
     def unit=(new_unit) #:nodoc:

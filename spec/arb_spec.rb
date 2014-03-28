@@ -161,6 +161,14 @@ describe AuthorizeNet::ARB::Subscription do
     subscription.length.should == AuthorizeNet::ARB::Subscription::UNLIMITED_OCCURRENCES
   end
   
+  it "should support connivence values for unlimited subscription total_occurrences" do
+    subscription = AuthorizeNet::ARB::Subscription.new(:total_occurrences => :unlimited)
+    subscription.total_occurrences.should == AuthorizeNet::ARB::Subscription::UNLIMITED_OCCURRENCES
+    subscription = AuthorizeNet::ARB::Subscription.new()
+    subscription.total_occurrences = :unlimited
+    subscription.total_occurrences.should == AuthorizeNet::ARB::Subscription::UNLIMITED_OCCURRENCES
+  end
+  
   it "should support connivence values for day interval units" do
     subscription = AuthorizeNet::ARB::Subscription.new(:unit => :day)
     subscription.unit.should == AuthorizeNet::ARB::Subscription::IntervalUnits::DAY
