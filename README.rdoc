@@ -1,4 +1,4 @@
-= This isn't the official repository for the ruby authorize.net sdk. http://developer.authorize.net/downloads/ is where that is.
+= This isn't the official repository for the ruby authorize.net sdk. https://github.com/AuthorizeNet/sdk-ruby is where that is.
 
 = Authorize.Net Ruby SDK
 
